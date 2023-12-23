@@ -4,7 +4,9 @@ import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 
 function Guess({ submitttedGuess }) {
   const guess = range(5).map((letter) => (
-    <span className="cell">{submitttedGuess[letter]}</span>
+    <span className="cell" key={Math.random()}>
+      {submitttedGuess[letter]}
+    </span>
   ));
   return <>{guess}</>;
 }
